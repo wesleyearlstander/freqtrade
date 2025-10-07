@@ -1,0 +1,9 @@
+{
+    "exchange": {
+        "name": "solanadex"
+    },
+    "dry_run": true,
+    "stake_currency": "USDC",
+    "trading_mode": "spot",
+    "runmode": "other"
+}
