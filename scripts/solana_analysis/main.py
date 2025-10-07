@@ -80,7 +80,7 @@ Examples:
     # Analyze command
     analyze_parser = subparsers.add_parser("analyze", help="Analyze waves and patterns")
     analyze_parser.add_argument("--timeframe", type=str, default="4h", help="Timeframe for analysis")
-    analyze_parser.add_argument("--threshold", type=float, default=10.0, help="Wave detection threshold (%)")
+    analyze_parser.add_argument("--threshold", type=float, default=10.0, help="Wave detection threshold (percent)")
     analyze_parser.add_argument("--method", type=str, default="zigzag", choices=["zigzag", "pivots", "swing"], help="Wave detection method")
     analyze_parser.add_argument("--recompute", action="store_true", help="Force recomputation of waves")
     analyze_parser.add_argument("--universe", type=str, default="top200", help="Universe of coins to analyze")
