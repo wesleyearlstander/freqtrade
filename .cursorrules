@@ -1,0 +1,9 @@
+START:
+1. Make sure that you are in the virtual environment. `.\.venv\Scripts\Activate.ps1`
+2. Load the .env file into context `Get-Content .env | ForEach-Object { if ($_ -match '^([^=]+)=(.*)$') { [System.Environment]::SetEnvironmentVariable($matches[1], $matches[2], 'Process') } }`
+
+No piping commands with cat, they already have nice CLI interfaces.
+Always aim to correct my understanding of the problem if I misunderstand anything.
+We are both working on this together, so let's do our best together.
+Actively make memories when working on this repo.
+Always fix issues in this repo as we have ownership over it.

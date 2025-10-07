@@ -39,7 +39,25 @@ def print_rich_table(
             table.add_row(*row_to_add)
 
     console = get_rich_console()
-    console.print(table)
+    try:
+        console.print(table)
+    except UnicodeEncodeError:
+        # Fallback for Windows console: sanitize Unicode characters
+        import sys
+        import io
+        # Temporarily set stdout encoding to UTF-8 with error replacement
+        original_stdout = sys.stdout
+        try:
+            sys.stdout.reconfigure(encoding='utf-8', errors='replace')  # type: ignore
+            console.print(table)
+        except (AttributeError, TypeError):
+            # If reconfigure not available, use TextIOWrapper with error handling
+            sys.stdout = io.TextIOWrapper(
+                sys.stdout.buffer, encoding='utf-8', errors='replace', line_buffering=True
+            )
+            console.print(table)
+        finally:
+            sys.stdout = original_stdout
 
 
 def _format_value(value: Any, *, floatfmt: str) -> str:
@@ -71,4 +89,22 @@ def print_df_rich_table(
         table.add_row(*row)
 
     console = get_rich_console()
-    console.print(table)
+    try:
+        console.print(table)
+    except UnicodeEncodeError:
+        # Fallback for Windows console: sanitize Unicode characters
+        import sys
+        import io
+        # Temporarily set stdout encoding to UTF-8 with error replacement
+        original_stdout = sys.stdout
+        try:
+            sys.stdout.reconfigure(encoding='utf-8', errors='replace')  # type: ignore
+            console.print(table)
+        except (AttributeError, TypeError):
+            # If reconfigure not available, use TextIOWrapper with error handling
+            sys.stdout = io.TextIOWrapper(
+                sys.stdout.buffer, encoding='utf-8', errors='replace', line_buffering=True
+            )
+            console.print(table)
+        finally:
+            sys.stdout = original_stdout

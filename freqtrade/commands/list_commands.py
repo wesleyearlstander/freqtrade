@@ -89,7 +89,26 @@ def start_list_exchanges(args: dict[str, Any]) -> None:
             # table.add_row(*[exchange[header] for header in headers])
 
         console = get_rich_console()
-        console.print(table)
+        try:
+            console.print(table)
+        except UnicodeEncodeError:
+            # Fallback for Windows console: sanitize Unicode characters
+            import io
+            import sys
+
+            # Temporarily set stdout encoding to UTF-8 with error replacement
+            original_stdout = sys.stdout
+            try:
+                sys.stdout.reconfigure(encoding="utf-8", errors="replace")  # type: ignore
+                console.print(table)
+            except (AttributeError, TypeError):
+                # If reconfigure not available, use TextIOWrapper with error handling
+                sys.stdout = io.TextIOWrapper(
+                    sys.stdout.buffer, encoding="utf-8", errors="replace", line_buffering=True
+                )
+                console.print(table)
+            finally:
+                sys.stdout = original_stdout
 
 
 def _print_objs_tabular(objs: list, print_colorized: bool) -> None:
@@ -332,9 +351,23 @@ def start_list_markets(args: dict[str, Any], pairs_only: bool = False) -> None:
     if pairs:
         if args.get("print_list", False):
             # print data as a list, with human-readable summary
-            print(f"{summary_str}: {', '.join(pairs.keys())}.")
+            # Handle Unicode characters for Windows console
+            try:
+                print(f"{summary_str}: {', '.join(pairs.keys())}.")
+            except UnicodeEncodeError:
+                # Fallback: encode with error replacement for Windows console
+                print(f"{summary_str}: {', '.join(pairs.keys())}.".encode('ascii', 'replace').decode('ascii'))
         elif args.get("print_one_column", False):
-            print("\n".join(pairs.keys()))
+            # Handle Unicode characters for Windows console
+            try:
+                print("\n".join(pairs.keys()))
+            except UnicodeEncodeError:
+                # Fallback: encode with error replacement for Windows console
+                for pair in pairs.keys():
+                    try:
+                        print(pair)
+                    except UnicodeEncodeError:
+                        print(pair.encode('ascii', 'replace').decode('ascii'))
         elif args.get("list_pairs_print_json", False):
             import rapidjson
 
