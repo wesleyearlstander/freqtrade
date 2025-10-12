@@ -1,0 +1,29 @@
+{
+  "AVAX/USDT:USDT": {
+    "leverage_level": 1,
+    "atr_mult": 3,
+    "cmf_length": 30,
+    "cmf_long_threshold": 0.09,
+    "cmf_short_threshold": -0.09,
+    "risk_ratio": 2.5,
+    "timeframe": "1h"
+  },
+  "STX/USDT:USDT": {
+    "leverage_level": 1,
+    "atr_mult": 2,
+    "cmf_length": 40,
+    "cmf_long_threshold": 0.07,
+    "cmf_short_threshold": -0.05,
+    "risk_ratio": 2,
+    "timeframe": "1h"
+  },
+  "APT/USDT:USDT": {
+    "leverage_level": 1,
+    "atr_mult": 2,
+    "cmf_length": 50,
+    "cmf_long_threshold": 0.05,
+    "cmf_short_threshold": -0.05,
+    "risk_ratio": 2.5,
+    "timeframe": "1h"
+  }
+}

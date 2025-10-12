@@ -1,0 +1,29 @@
+{
+  "VET/USDT:USDT": {
+    "leverage_level": 1,
+    "ema_rolling_window": 4,
+    "macd_rolling_window": 8,
+    "risk_ratio": 2,
+    "stop_loss_buffer": 0.001,
+    "swing_point_lookback": 4,
+    "timeframe": "1h"
+  },
+  "DOT/USDT:USDT": {
+    "leverage_level": 1,
+    "ema_rolling_window": 4,
+    "macd_rolling_window": 10,
+    "risk_ratio": 2.5,
+    "stop_loss_buffer": 0.008,
+    "swing_point_lookback": 3,
+    "timeframe": "1h"
+  },
+  "NEAR/USDT:USDT": {
+    "leverage_level": 1,
+    "ema_rolling_window": 4,
+    "macd_rolling_window": 8,
+    "risk_ratio": 2.5,
+    "stop_loss_buffer": 0.006,
+    "swing_point_lookback": 5,
+    "timeframe": "1h"
+  }
+}

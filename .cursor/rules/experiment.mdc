@@ -1,0 +1,16 @@
+---
+alwaysApply: false
+---
+
+## Experiment
+
+I am currently experimenting with the following strategy:
+
+- @ADX_OBV_PairOptimized.py
+
+An experiment consists of, adding a parameter, tuning that parameter as a hyperopt, and then comparing the results to the baseline given.
+
+You must beat the previous baseline for the experiment to be a success.
+
+Document the results of the experiment
+in a [parameter_name].md results file.

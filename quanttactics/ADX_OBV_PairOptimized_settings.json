@@ -1,0 +1,29 @@
+{
+  "SOL/USDT:USDT": {
+    "leverage_level": 1,
+    "adx_threshold": 25,
+    "atr_mult": 2.5,
+    "di_cross_window": 10,
+    "obv_ma_period": 80,
+    "risk_ratio": 2,
+    "timeframe": "1h"
+  },
+  "DOT/USDT:USDT": {
+    "leverage_level": 1,
+    "adx_threshold": 25,
+    "atr_mult": 2.5,
+    "di_cross_window": 10,
+    "obv_ma_period": 80,
+    "risk_ratio": 2,
+    "timeframe": "1h"
+  },
+  "XRP/USDT:USDT": {
+    "leverage_level": 1,
+    "adx_threshold": 25,
+    "atr_mult": 2,
+    "di_cross_window": 25,
+    "obv_ma_period": 100,
+    "risk_ratio": 1.5,
+    "timeframe": "1h"
+  }
+}

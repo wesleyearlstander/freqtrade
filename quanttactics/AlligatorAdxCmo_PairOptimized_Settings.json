@@ -1,0 +1,22 @@
+{
+  "AVAX/USDT:USDT": {
+    "adx_threshold": 20,
+    "atr_mult": 2.5,
+    "cmo_threshold": 25,
+    "ema_period": 200,
+    "risk_ratio": 2,
+    "leverage_level": 1, 
+    "mouth_closed_lookback": 2,  
+    "timeframe": "1h"
+  },
+  "NEAR/USDT:USDT": {
+    "adx_threshold": 20,
+    "atr_mult": 2.5,
+    "cmo_threshold": 15,
+    "ema_period": 100,
+    "risk_ratio": 1.5,
+    "leverage_level": 1,  
+    "mouth_closed_lookback": 2, 
+    "timeframe": "1h"
+  }
+}

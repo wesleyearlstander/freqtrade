@@ -1,0 +1,35 @@
+{
+  "GRT/USDT:USDT": {
+    "leverage_level": 1,
+    "adx_period": 6,
+    "adx_threshold": 25,
+    "atr_mult": 0.7,
+    "atr_price_threshold": 0.03,
+    "cross_rolling_window": 3,
+    "long_sma_period": 100,
+    "short_sma_period": 20,
+    "timeframe": "4h"
+  },
+  "AVAX/USDT:USDT": {
+    "leverage_level": 1,
+    "adx_period": 4,
+    "adx_threshold": 30,
+    "atr_mult": 0.5,
+    "atr_price_threshold": 0.01,
+    "cross_rolling_window": 4,
+    "long_sma_period": 100,
+    "short_sma_period": 20,
+    "timeframe": "4h"
+  },
+  "DOT/USDT:USDT": {
+    "leverage_level": 1,
+    "adx_period": 5,
+    "adx_threshold": 35,
+    "atr_mult": 0.5,
+    "atr_price_threshold": 0.008,
+    "cross_rolling_window": 4,
+    "long_sma_period": 100,
+    "short_sma_period": 10,
+    "timeframe": "4h"
+  }
+}

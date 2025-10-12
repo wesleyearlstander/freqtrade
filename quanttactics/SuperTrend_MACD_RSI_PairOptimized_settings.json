@@ -1,0 +1,32 @@
+{
+  "TON/USDT:USDT": {
+    "leverage_level": 1,
+    "max_candle_size": 0.05,
+    "risk_ratio": 2.5,
+    "rsi_threshold": 55,
+    "supertrend_length": 16,
+    "supertrend_multiplier": 2,
+    "swing_point_lookback": 8,
+    "timeframe": "1h"
+  },
+  "DOT/USDT:USDT": {
+    "leverage_level": 1,
+    "max_candle_size": 0.09,
+    "risk_ratio": 1.5,
+    "rsi_threshold": 50,
+    "supertrend_length": 10,
+    "supertrend_multiplier": 4,
+    "swing_point_lookback": 8,
+    "timeframe": "1h"
+  },
+  "APT/USDT:USDT": {
+    "leverage_level": 1,
+    "max_candle_size": 0.07,
+    "risk_ratio": 1.5,
+    "rsi_threshold": 60,
+    "supertrend_length": 14,
+    "supertrend_multiplier": 5,
+    "swing_point_lookback": 4,
+    "timeframe": "1h"
+  }
+}

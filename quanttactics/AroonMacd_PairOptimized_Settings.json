@@ -1,0 +1,26 @@
+{
+  "NEAR/USDT:USDT": {
+    "leverage_level": 1,
+    "aroon_cross_window": 5,
+    "atr_mult": 2.5,
+    "macd_cross_window": 5,
+    "risk_ratio": 2.5,
+    "timeframe": "1h"
+  },
+  "ARB/USDT:USDT": {
+    "leverage_level": 1,
+    "aroon_cross_window": 15,
+    "atr_mult": 2.5,
+    "macd_cross_window": 5,
+    "risk_ratio": 2,
+    "timeframe": "1h"
+  },
+  "TRX/USDT:USDT": {
+    "leverage_level": 1,
+    "aroon_cross_window": 15,
+    "atr_mult": 3,
+    "macd_cross_window": 15,
+    "risk_ratio": 3,
+    "timeframe": "1h"
+  }
+}
