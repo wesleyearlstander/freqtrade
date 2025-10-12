@@ -1,0 +1,35 @@
+{
+  "MKR/USDT:USDT": {
+    "leverage_level": 1,
+    "atr_mult": 2,
+    "holding_days": 6,
+    "max_candle_size": 0.03,
+    "risk_ratio": 2,
+    "rsi_length": 14,
+    "rsi_lower_threshold": 45,
+    "rsi_upper_threshold": 55,
+    "timeframe": "1h"
+  },
+  "ICP/USDT:USDT": {
+    "leverage_level": 1,
+    "atr_mult": 3,
+    "holding_days": 5,
+    "max_candle_size": 0.03,
+    "risk_ratio": 2.5,
+    "rsi_length": 14,
+    "rsi_lower_threshold": 35,
+    "rsi_upper_threshold": 65,
+    "timeframe": "1h"
+  },
+  "STX/USDT:USDT": {
+    "leverage_level": 1,
+    "atr_mult": 2,
+    "holding_days": 7,
+    "max_candle_size": 0.03,
+    "risk_ratio": 2,
+    "rsi_length": 14,
+    "rsi_lower_threshold": 45,
+    "rsi_upper_threshold": 65,
+    "timeframe": "1h"
+  }
+}

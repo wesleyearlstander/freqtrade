@@ -1,0 +1,29 @@
+{
+    "DOT/USDT:USDT": {
+      "leverage_level": 1,
+      "atr_mult": 2,
+      "macd_cross_window": 15,
+      "risk_ratio": 2.5,
+      "trend_filter_enabled": false,
+      "vwap_cross_window": 15,
+      "timeframe": "1h"
+    },
+    "TON/USDT:USDT": {
+      "leverage_level": 1,
+      "atr_mult": 2,
+      "macd_cross_window": 5,
+      "risk_ratio": 3,
+      "trend_filter_enabled": true,
+      "vwap_cross_window": 15,
+      "timeframe": "1h"
+    },
+    "BCH/USDT:USDT": {
+      "leverage_level": 1,
+      "atr_mult": 2,
+      "macd_cross_window": 10,
+      "risk_ratio": 3,
+      "trend_filter_enabled": true,
+      "vwap_cross_window": 10,
+      "timeframe": "1h"
+    }
+  }

@@ -1,0 +1,26 @@
+{
+  "WIF/USDT:USDT": {
+    "leverage_level": 1,
+    "adx_threshold": 35,
+    "atr_mult": 2,
+    "risk_ratio": 2.5,
+    "tema_rolling_window": 8,
+    "timeframe": "1h"
+  },
+  "ADA/USDT:USDT": {
+    "leverage_level": 1,
+    "adx_threshold": 30,
+    "atr_mult": 2,
+    "risk_ratio": 2.5,
+    "tema_rolling_window": 8,
+    "timeframe": "1h"
+  },
+  "APT/USDT:USDT": {
+    "leverage_level": 1,
+    "adx_threshold": 35,
+    "atr_mult": 2.5,
+    "risk_ratio": 2,
+    "tema_rolling_window": 8,
+    "timeframe": "1h"
+  }
+}

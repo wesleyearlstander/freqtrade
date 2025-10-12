@@ -35,7 +35,14 @@ CcxtModuleType = Any
 
 
 def is_exchange_known_ccxt(exchange_name: str, ccxt_module: CcxtModuleType | None = None) -> bool:
-    return exchange_name in ccxt_exchanges(ccxt_module)
+    # Check if it's a ccxt exchange
+    if exchange_name in ccxt_exchanges(ccxt_module):
+        return True
+    
+    # Check if it's a custom exchange
+    from freqtrade.resolvers.exchange_resolver import ExchangeResolver
+    subclassed = {e["name"].lower(): e for e in ExchangeResolver.search_all_objects({}, False)}
+    return exchange_name.lower() in subclassed
 
 
 def ccxt_exchanges(ccxt_module: CcxtModuleType | None = None) -> list[str]:
@@ -58,6 +65,15 @@ def validate_exchange(exchange: str) -> tuple[bool, str, ccxt.Exchange | None]:
     returns: can_use, reason, exchange_object
         with Reason including both missing and missing_opt
     """
+    # Check if it's a custom exchange first
+    from freqtrade.resolvers.exchange_resolver import ExchangeResolver
+    subclassed = {e["name"].lower(): e for e in ExchangeResolver.search_all_objects({}, False)}
+    
+    if exchange.lower() in subclassed:
+        # Custom exchange - assume it's valid
+        return True, "", None
+    
+    # Check ccxt exchanges
     try:
         ex_mod = getattr(ccxt.pro, exchange.lower())()
     except AttributeError:
@@ -135,6 +151,32 @@ def list_available_exchanges(all_exchanges: bool) -> list[ValidExchangesType]:
     exchanges_valid: list[ValidExchangesType] = [
         _build_exchange_list_entry(e, subclassed) for e in exchanges
     ]
+    
+    # Add custom exchanges that are not in ccxt
+    for exchange_name, exchange_info in subclassed.items():
+        if exchange_name not in [e.lower() for e in exchanges]:
+            # Create a custom exchange entry
+            custom_exchange: ValidExchangesType = {
+                "name": exchange_info["name"],
+                "classname": exchange_name,
+                "valid": True,  # Custom exchanges are considered valid
+                "supported": True,  # Custom exchanges are considered supported
+                "comment": "Custom exchange",
+                "dex": True,  # SolanaDex is a DEX
+                "is_alias": False,
+                "alias_for": None,
+                "trade_modes": [{"trading_mode": "spot", "margin_mode": ""}],
+            }
+            
+            # Update with actual trade modes if available
+            if hasattr(exchange_info["class"], "_supported_trading_mode_margin_pairs"):
+                supported_modes: list[TradeModeType] = [
+                    {"trading_mode": tm.value, "margin_mode": mm.value if mm else ""}
+                    for tm, mm in exchange_info["class"]._supported_trading_mode_margin_pairs
+                ]
+                custom_exchange["trade_modes"] = supported_modes
+            
+            exchanges_valid.append(custom_exchange)
 
     return exchanges_valid
 

@@ -1,0 +1,46 @@
+{
+  "BTC/USDT:USDT": {
+    "leverage_level": 2,
+    "atr_mult": 3,
+    "risk_ratio": 2,
+    "rsi_macd_rolling_window": 4,
+    "rsi_threshold": 50,
+    "stoch_overbought_threshold": 80,
+    "stoch_oversold_threshold": 30,
+    "stoch_rolling_window": 5,
+    "timeframe": "30m"
+  },
+  "MINA/USDT:USDT": {
+    "leverage_level": 2,
+    "atr_mult": 2,
+    "risk_ratio": 2,
+    "rsi_macd_rolling_window": 2,
+    "rsi_threshold": 50,
+    "stoch_overbought_threshold": 80,
+    "stoch_oversold_threshold": 20,
+    "stoch_rolling_window": 15,
+    "timeframe": "30m"
+  },
+  "XRP/USDT:USDT": {
+    "leverage_level": 2,
+    "atr_mult": 3,
+    "risk_ratio": 2,
+    "rsi_macd_rolling_window": 6,
+    "rsi_threshold": 50,
+    "stoch_overbought_threshold": 80,
+    "stoch_oversold_threshold": 30,
+    "stoch_rolling_window": 10,
+    "timeframe": "30m"
+  },
+  "NEAR/USDT:USDT": {
+    "leverage_level": 2,
+    "atr_mult": 2.5,
+    "risk_ratio": 2.5,
+    "rsi_macd_rolling_window": 6,
+    "rsi_threshold": 50,
+    "stoch_overbought_threshold": 70,
+    "stoch_oversold_threshold": 20,
+    "stoch_rolling_window": 15,
+    "timeframe": "30m"
+  }
+}

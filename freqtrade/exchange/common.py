@@ -51,6 +51,9 @@ MAP_EXCHANGE_CHILDCLASS = {
     "okxus": "okx",
     "gateio": "gate",
     "huboi": "htx",
+    "solanadex": "SolanaDex",
+    "Solanadex": "SolanaDex",
+    "SolanaDex": "SolanaDex",
 }
 
 SUPPORTED_EXCHANGES = [

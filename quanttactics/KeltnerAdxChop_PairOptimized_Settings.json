@@ -1,0 +1,32 @@
+{
+  "DOGE/USDT:USDT": {
+    "leverage_level": 1,
+    "adx_threshold": 25,
+    "atr_mult": 2,
+    "chop_threshold": 40,
+    "kc_atr_mult": 2.5,
+    "kc_period": 25,
+    "risk_ratio": 2,
+    "timeframe": "1h"
+  },
+  "FIL/USDT:USDT": {
+    "leverage_level": 1,
+    "adx_threshold": 20,
+    "atr_mult": 2.5,
+    "chop_threshold": 40,
+    "kc_atr_mult": 2,
+    "kc_period": 15,
+    "risk_ratio": 2,
+    "timeframe": "1h"
+  },
+  "LINK/USDT:USDT": {
+    "leverage_level": 1,
+    "adx_threshold": 20,
+    "atr_mult": 2.5,
+    "chop_threshold": 40,
+    "kc_atr_mult": 2,
+    "kc_period": 15,
+    "risk_ratio": 2,
+    "timeframe": "1h"
+  }
+}

@@ -1,0 +1,32 @@
+{
+  "NEAR/USDT:USDT": {
+    "leverage_level": 1,
+    "ema_slope_window": 10,
+    "risk_ratio": 2,
+    "stochrsi_overbought_threshold": 70,
+    "stochrsi_oversold_threshold": 30,
+    "stochrsi_threshold_window": 6,
+    "swing_point_lookback": 9,
+    "timeframe": "1h"
+  },
+  "ARB/USDT:USDT": {
+    "leverage_level": 1,
+    "ema_slope_window": 10,
+    "risk_ratio": 2,
+    "stochrsi_overbought_threshold": 70,
+    "stochrsi_oversold_threshold": 30,
+    "stochrsi_threshold_window": 3,
+    "swing_point_lookback": 9,
+    "timeframe": "1h"
+  },
+  "TON/USDT:USDT": {
+    "leverage_level": 1,
+    "ema_slope_window": 15,
+    "risk_ratio": 2,
+    "stochrsi_overbought_threshold": 80,
+    "stochrsi_oversold_threshold": 30,
+    "stochrsi_threshold_window": 6,
+    "swing_point_lookback": 12,
+    "timeframe": "1h"
+  }
+}

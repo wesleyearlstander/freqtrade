@@ -1,0 +1,69 @@
+---
+alwaysApply: true
+---
+
+# The Ultimate Guide to Freqtrade Hyperparameter Optimization: Boost Your Trading Strategy
+
+## 1. Running Hyperopt with Smaller Search Space
+
+Link: <https://www.freqtrade.io/en/stable/hyperopt/#running-hyperopt-with-smaller-search-space>
+
+## 2. Loss-functions
+
+Link: <https://www.freqtrade.io/en/2024.4/hyperopt/#loss-functions>
+
+## 3. Parameter options
+
+Link: <https://www.freqtrade.io/en/2024.4/hyperopt/#parameter-options>
+
+## 4. Hyperopt command
+
+freqtrade hyperopt --strategy AwesomeStrategy3 --spaces buy sell roi stoploss --hyperopt-loss SharpeHyperOptLossDaily --config user_data/config_binance_spot.json --timeframe 1h --timeframe-detail 5m -e 100 --timerange 20240201-20240801
+
+## 5. Default ROI Search Space
+
+Link: <https://www.freqtrade.io/en/2024.4/hyperopt/#default-roi-search-space>
+
+## 6. Default Stoploss Search Space
+
+Link: <https://www.freqtrade.io/en/2024.4/hyperopt/#default-stoploss-search-space>
+
+## 7. Guards and Triggers
+
+Link: <https://www.freqtrade.io/en/stable/hyperopt/#configure-your-guards-and-triggers>
+
+## 8. Parameter types
+
+Link: <https://www.freqtrade.io/en/stable/hyperopt/#parameter-types>
+
+## 9. Optimizing an indicator parameter
+
+Link: <https://www.freqtrade.io/en/stable/hyperopt/#optimizing-an-indicator-parameter>
+
+## 10. Reproducible results
+
+Link: <https://www.freqtrade.io/en/stable/hyperopt/#reproducible-results>
+
+## 11. List Hyperopt results
+
+Link: <https://www.freqtrade.io/en/stable/utils/#list-hyperopt-results>
+
+freqtrade hyperopt-list --profitable --no-details
+
+## 12. Show details of Hyperopt results
+
+Link: <https://www.freqtrade.io/en/stable/utils/#show-details-of-hyperopt-results>
+
+freqtrade hyperopt-show -n 61
+
+## 13. Backtesting
+
+freqtrade backtesting --strategy AwesomeStrategy3 --timeframe 1h --timerange 20240201-20240801 --breakdown month -c user_data/config_binance_spot.json --timeframe-detail 5m
+
+## 14. Out of Memory errors
+
+Link: <https://www.freqtrade.io/en/stable/hyperopt/#out-of-memory-errors>
+
+Try --analyze-per-epoch to reduce RAM when tuning strategies with many .range parameters.
+
+And you can reduce memory load by using the -j -2 flag, which leaves one CPU free. (-1 is all CPUs) and 1 removes parallel processing completely. Not recommended until last resort.

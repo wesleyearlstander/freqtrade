@@ -39,6 +39,8 @@ class ExchangeResolver(IResolver):
         # Map exchange name to avoid duplicate classes for identical exchanges
         exchange_name = MAP_EXCHANGE_CHILDCLASS.get(exchange_name, exchange_name)
         exchange_name = exchange_name.title()
+        # Map again after title case conversion
+        exchange_name = MAP_EXCHANGE_CHILDCLASS.get(exchange_name, exchange_name)
         exchange = None
         try:
             exchange = ExchangeResolver._load_exchange(
