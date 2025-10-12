@@ -1,5 +1,7 @@
 # Freqtrade rules
 config*.json
+quanttactics/*config*.json
+quanttactics/binance*.json
 *.sqlite
 *.sqlite-shm
 *.sqlite-wal
